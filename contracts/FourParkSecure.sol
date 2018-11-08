@@ -18,32 +18,6 @@ contract FourParkSecure is NFToken {
     _;
   }
   
-  // Adding modifier to the transferFrom method
-  // Then calling the super
-  function transferFrom(
-    address _from,
-    address _to,
-    uint256 _tokenId
-  )
-    external
-    onlySecured(_tokenId)
-  {
-    super.transferFrom(_from, _to, _tokenId);
-  }
-
-  // Adding modifier to the safeTransferFrom method
-  // Then calling the super
-  function safeTransferFrom(
-    address _from,
-    address _to,
-    uint256 _tokenId
-  )
-    external
-    onlySecured(_tokenId)
-  {
-    super._safeTransferFrom(_from, _to, _tokenId);
-  }
-
   // Function to secure token
   function secureToken(uint256 _tokenId)
     public
