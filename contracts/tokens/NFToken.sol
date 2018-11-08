@@ -351,8 +351,8 @@ contract NFToken is
     address from = idToOwner[_tokenId];
     clearApproval(_tokenId);
 
-    removeNFToken(from, _tokenId);
-    addNFToken(_to, _tokenId);
+    _removeNFToken(from, _tokenId);
+    _addNFToken(_to, _tokenId);
 
     emit Transfer(from, _to, _tokenId);
   }
@@ -375,7 +375,7 @@ contract NFToken is
     require(_tokenId != 0);
     require(idToOwner[_tokenId] == address(0));
 
-    addNFToken(_to, _tokenId);
+    _addNFToken(_to, _tokenId);
 
     emit Transfer(address(0), _to, _tokenId);
   }
@@ -396,7 +396,7 @@ contract NFToken is
     internal
   {
     clearApproval(_tokenId);
-    removeNFToken(_owner, _tokenId);
+    _removeNFToken(_owner, _tokenId);
     emit Transfer(_owner, address(0), _tokenId);
   }
 

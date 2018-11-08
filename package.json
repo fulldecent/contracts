@@ -55,10 +55,10 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "ethjs-util": "^0.1.6",
-    "truffle": "^4.1.12",
-    "truffle-flattener": "^1.2.8"
+    "truffle": "^4.1.14",
+    "truffle-flattener": "^1.2.9"
   },
   "dependencies": {
-    "@0xcert/ethereum-utils": "^1.0.1"
+    "@0xcert/ethereum-utils": "^1.1.0"
   }
 }
