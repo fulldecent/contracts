@@ -21,21 +21,17 @@ contract FourParkSecure is NFToken {
   // Function to secure token
   function secureToken(uint256 _tokenId)
     public
-    returns (bool)
   {
     require(Secured[_tokenId] == false);
     Secured[_tokenId] = true;
-    return true;
   }
 
   // Function to unsecure token
   function unsecureToken(uint256 _tokenId)
     public
     onlyNotSecured(_tokenId) 
-    returns (bool)
   {
     Secured[_tokenId] = false;
-    return true;
   }
 
   // Function to query state of token, no gas
