@@ -21,21 +21,17 @@ contract FourParkFreeze is NFToken {
   // Function to freeze token
   function freezeToken(uint256 _tokenId)
     public
-    returns (bool)
   {
     require(Frozen[_tokenId] == false);
     Frozen[_tokenId] = true;
-    return true;
   }
 
   // Function to unFreezeToken
   function unFreezeToken(uint256 _tokenId)
     public
-    returns (bool)
   {
     require(Frozen[_tokenId] == true);
     Frozen[_tokenId] = false;
-    return true;
   }
 
   // Function to query state of token, no gas
